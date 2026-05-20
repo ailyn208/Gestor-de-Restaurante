@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #0f172a;
+    background-image: 
+      radial-gradient(at 0% 0%, #1e293b 0px, transparent 50%), 
+      radial-gradient(at 100% 0%, #312e81 0px, transparent 50%), 
+      radial-gradient(at 100% 100%, #1e1b4b 0px, transparent 50%), 
+      radial-gradient(at 0% 100%, #431407 0px, transparent 50%);
+    background-attachment: fixed;
+    background-size: cover;
+    color: rgba(255, 255, 255, 0.9);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    color: #ffffff;
+  }
+}
+
+/* --- FROSTED GLASS CORE STRUCTURAL THEMING (SEMANTIC OVERRIDES) --- */
+
+/* Standard white boxes became premium frosted-glass containers */
+.bg-white {
+  background: rgba(255, 255, 255, 0.04) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Sidebar layout in glass mode */
+.bg-slate-900 {
+  background: rgba(15, 23, 42, 0.45) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Workspace main content background overlay */
+.bg-slate-50 {
+  background: transparent !important;
+}
+
+/* Greyish border overrides */
+.border-slate-100, 
+.border-slate-200, 
+.border-slate-300, 
+.border-slate-105 {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Inputs, Select dropdowns, Textareas */
+input, select, textarea {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 0.75rem !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  outline: none !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+select option {
+  background-color: #1e1b4b !important;
+  color: #ffffff !important;
+}
+
+/* High contrast Text translation from dark slate to white */
+.text-slate-900, 
+.text-slate-850, 
+.text-slate-800 {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.text-slate-700, 
+.text-slate-650 {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.text-slate-600 {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.text-slate-505,
+.text-slate-500 {
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
+.text-slate-400 {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.text-slate-450 {
+  color: rgba(255, 255, 255, 0.35) !important;
+}
+
+.text-slate-300 {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Active tab style from the design theme */
+.bg-indigo-650 {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-left: 4px solid #fb923c !important;
+  border-radius: 0 0.75rem 0.75rem 0 !important;
+  color: #ffffff !important;
+}
+
+/* Specific buttons inside grids or charts */
+.bg-slate-50.border-slate-105 {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Pastel Badge color-mapping into neon glass badges */
+.bg-emerald-50, .bg-emerald-100, .bg-emerald-500\/10, .bg-green-50, .bg-green-100, .bg-green-500\/10, .bg-green-500\/20 {
+  background: rgba(16, 185, 129, 0.15) !important;
+  color: #34d399 !important;
+  border: 1px solid rgba(16, 185, 129, 0.25) !important;
+}
+
+.bg-amber-50, .bg-amber-100, .bg-amber-500\/10, .bg-amber-500\/20, .bg-orange-50, .bg-orange-100, .bg-orange-500\/25, .bg-orange-500\/20 {
+  background: rgba(245, 158, 11, 0.15) !important;
+  color: #fbbf24 !important;
+  border: 1px solid rgba(245, 158, 11, 0.25) !important;
+}
+
+.bg-sky-50, .bg-sky-100, .bg-sky-500\/10, .bg-blue-50, .bg-blue-100, .bg-blue-500\/10, .bg-blue-500\/20, .bg-blue-500\/30 {
+  background: rgba(56, 189, 248, 0.15) !important;
+  color: #38bdf8 !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+}
+
+.bg-rose-50, .bg-rose-100, .bg-rose-500\/10, .bg-rose-500\/20, .bg-red-50, .bg-red-100, .bg-red-500\/10, .bg-rose-200 {
+  background: rgba(244, 63, 94, 0.15) !important;
+  color: #fb7185 !important;
+  border: 1px solid rgba(244, 63, 94, 0.25) !important;
+}
+
+.bg-indigo-50, .bg-indigo-100, .bg-indigo-500\/10, .bg-indigo-500\/20, .bg-indigo-500\/30 {
+  background: rgba(129, 140, 248, 0.15) !important;
+  color: #818cf8 !important;
+  border: 1px solid rgba(129, 140, 248, 0.25) !important;
+}
+
+.bg-purple-50, .bg-purple-100, .bg-purple-500\/10, .bg-purple-500\/20 {
+  background: rgba(168, 85, 247, 0.15) !important;
+  color: #c084fc !important;
+  border: 1px solid rgba(168, 85, 247, 0.25) !important;
+}
+
+/* Modals, absolute overlay styling */
+.bg-black\/40, .bg-black\/50, .bg-slate-900\/80, .bg-slate-900\/50, .bg-slate-950\/80 {
+  background-color: rgba(5, 5, 10, 0.6) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+/* Custom modern scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.01);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Print layout optimizations for ticketing kept safe */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #ticket-printer-content, #ticket-printer-content * {
+    visibility: visible;
+  }
+  #ticket-printer-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+  }
+}

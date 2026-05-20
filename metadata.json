@@ -1,0 +1,6 @@
+{
+  "name": "Gestor de Restaurante",
+  "description": "Sistema completo para la gestión de restaurante: control de comandas, menú, personal (chefs y meseros), clientes, ventas y cobros.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
